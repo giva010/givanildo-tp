@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace salarios
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Salario;
+            double ValorSalario, Aumento, AumentoTotal;
+            int Escolha;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(" Digite o Salario, R$:");
+                Console.ReadLine();
+                Console.WriteLine("Opção 1 - Aumento de 9%");
+                Console.WriteLine("Opção 2 - Aumento de 15%");
+                Console.WriteLine("Opção 3 - Aumento de 20%");
+                Salario = int.Parse(Console.ReadLine());
+                ValorSalario = double.Parse(Console.ReadLine());
+                Console.WriteLine("Usuario digite a Opção");
+                Escolha = int.Parse(Console.ReadLine());
+
+                switch (Escolha)
+                {
+                    case 1:
+                        Aumento = ValorSalario + (ValorSalario * 9 / 100);
+                        AumentoTotal = Salario * Aumento;
+                        Console.WriteLine("O aumento salárial foi de R$: " + Aumento);
+                        break;
+
+                    case 2:
+                        Aumento = ValorSalario + (ValorSalario * 15 / 100);
+                        AumentoTotal = Salario * Aumento;
+                        Console.WriteLine("O aumento salárial foi de R$: " + Aumento);
+                        break;
+
+                    case 3:
+                        Aumento = ValorSalario + (ValorSalario * 20 / 100);
+                        AumentoTotal = Salario * Aumento;
+                        Console.WriteLine("O aumento salárial foi de R$: " + Aumento);
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida, tente novamente");
+                        break;
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}
